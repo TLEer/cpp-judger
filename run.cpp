@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-
+#define For(i, l, r) for (int i = (l), i##end = (r); i <= i##end; ++i)
+#define Fordown(i, r, l) for (int i = (r), i##end = (l); i >= i##end; --i)
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -18,7 +19,7 @@ int main(int argc, char *argv[]) {
     cout << "Compile Error" << endl;
     return 0;
   }
-  string run_com = "./";
+  string run_com = "./judger ";
   run_com += argv[1];
   system(run_com.c_str());
   return 0;

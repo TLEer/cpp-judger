@@ -1,42 +1,23 @@
 #include <bits/stdc++.h>
+#define For(i, l, r) for (int i = (l), i##end = (r); i <= i##end; ++i)
+#define Fordown(i, r, l) for (int i = (r), i##end = (l); i >= i##end; --i)
 using namespace std;
-
-const int MaxN = 200000;
+const int maxn = 200000;
 
 int n;
-int p[MaxN + 1], q[MaxN + 1];
+int p[maxn + 1], q[maxn + 1];
 
-bool check(int res) {}
+bool check() {}
 
 int main(int argc, char *argv[]) {
   FILE *fin = fopen("input", "r");
   FILE *fout = fopen("user_out", "r");
   FILE *fans = fopen("answer", "r");
 
-  int u, v;
-  fscanf(fout, "%d", &u);
-  fscanf(fans, "%d", &v);
-  if (v == -1) {
-    if (u != -1) {
-      printf("0");
-      fprintf(stderr, "wrong answer1.");
-      exit(0);
-    } else {
-      printf("100");
-      exit(0);
-    }
-  }
-
-  if (u != v) {
-    printf("0");
-    fprintf(stderr, "wrong answer2.");
-    exit(0);
-  }
-
   fscanf(fin, "%d", &n);
-  for (int i = 1; i <= n; ++i) fscanf(fin, "%d", &p[i]);
-  for (int i = 1; i <= n; ++i) fscanf(fout, "%d", &q[i]);
-  if (!check(v)) {
+  For(i, 1, n) fscanf(fin, "%d", &p[i]);
+  For(i, 1, n) fscanf(fout, "%d", &q[i]);
+  if (!check()) {
     printf("0");
     fprintf(stderr, "wrong answer3.");
     exit(0);
